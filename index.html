@@ -6,201 +6,29 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1"> 
 </head>
 <body>
+    <script>
+        "user strict"
+        let userName = prompt('What is your name?');
+        if (!userName) {
+            alert('Incorrect data');
+        };
+        let userAge = +prompt('How old are you?');
+        if(!userAge){
+            alert('Incorrect data');
+        }
 
+        let pet = confirm('Do you have a pet?');
 
+        if (pet) {
+            let petName = prompt('What is the name of your pet?');
+            if(petName){
+                alert(`Hello, my name is ${userName},  I am ${userAge} year old. ${pet}, I have a pet . Its name is ${petName}`);
+            }
+            
+        } else {
+            alert(`Hello, my name is ${userName},  I am ${userAge} year old. ${pet},  I haven't got a pet.`);
+        }
 
-<script>
-
-	// https://learn.javascript.ru/
-	// w3schools.com
-	// https://developer.mozilla.org/ru/
-	// web.dev
-	// https://karmazzin.gitbook.io/eloquentjavascript_ru/
-	// http://code.mu/ru/javascript/book/prime/
-
-	// variables and data types
- 	
- 	// let, const, var
-
-
- 	// на данный момент существует 7(8) типов данных
- 	let a; // undefined
- 	let b, c, d;
- 	let e = true; // boolean true || false
-
- 	b = undefined;
- 	b = 8; // number <2^54 incl. ±Infinity, ±0, NaN
- 	c = 'Hello'; // string
- 	d = '475438545905854505984355654689n'; // bigInt
- 	f = null;
- 	let sym = Symbol('name'); // symbol
-
- 	// ???? 8-th - Object
-
- 	let obj = {
- 		name: 'Jane',
- 		age: 22,
- 		city: 'LA',
- 		hobbys: ['Art', 'Football', 'Cooking', 'JS']
- 	};
-
- 	// operators
-
- 	// + - * / % (остаток от деления) == === ++ -- ! != !=== > < >= <= || &&
-
-
- 	const x = 10;
-
-	// JS standart functions
-
-	console.log(c);
-	console.warn('Warning');
-	console.error('Alarm!');
-
-	// alert('Hello User');
-	// confirm('Do you really want to quit?');
-
-
-
- 	let k = 6;
- 	let l = 6;
-
- 	// if-else
-
- 	if(k > l){
- 		console.log('k > l');
- 	}
- 	else if(k === l){
- 		console.log('k = l');
- 	}
- 	else{
- 		console.log('l > k');
- 	}
-
-
- 	// switch
-
-
-	// let day = +prompt('Type number 1-7', 1);
-
-	// switch(day){
-	// 	case 1: console.log('Monday');
-	// 			break;
-	// 	case 2: console.log('Tuesday');
-	// 			break;
-	// 	case 3: console.log('Wed');
-	// 			break;
-	// 	case 4: console.log('Thu');
-	// 			break;
-	// 	case 5: console.log('Fri');
-	// 			break;
-	// 	case 6: console.log('Sat');
-	// 			break;
-	// 	case 7: console.log('Sun');
-	// 			break;
-	// 	default: console.log('Not a day');
-	// 			break;
-	// }
-
-	// "" '' ``
-
-	let username = 'Peter';
-	let msg = `Hello ${username} 🦄`;
-	console.log(msg);
-
-	// loops
-
-	for(let i = 0; i <= 5; i++){
-		console.log(`i: ${i}`);
-	}
-
-	let m = 10;
-	while(m > 7){
-		console.log(`m: ${m}`);
-		m--;
-	}
-
-	let n = 7;
-	do{
-		console.log(`n: ${n}`);
-		n++;
-	}
-	while(n<6);
-
-	a = 35;
-	b = 10;
-	
-	if(a < 20 && b > 5){
-		console.log('true');
-	}
-	else{
-		console.log('false');
-	}
-
-
-	if(a < 20 || b > 5){
-		console.log('true2');
-	}
-	else{
-		console.log('false2');
-	}
-
-
-	let isLoggedIn = false;
-
-	if(!isLoggedIn){ // isLoggedIn !== true || isLoggedIn === false
-		// предложить форму логина
-		console.log('please, log in');
-		isLoggedIn = !isLoggedIn;
-	}
-
-
-	c = 12;
-
-	while(c < 25){
-		c += 3; // c = c + 3 => += -= *= /=
-		console.warn(`c=${c}`);
-	}
-
-
-// тернарный оператор
-
-	let p = 9;
-	let q = 7;
-
-	let o = p > q ? p : q; // условие ? true : false
-
- 	let w = k > l ? k : (k< l) ? l : null; 
-
- 	// camelCase => isLoggedIn
-
-
- 	// HW: написать "Программу", которая спрашивает пользователя его имя, возраст, есть ли питомец и имя питомца и обрабатывает каким-то образом данную информацию (придумайте сообщение в консоли)
-
-
- 	let min = +prompt('Type a minute');
-
-
- 	if(min <= 15){
- 		console.log('First quarter');
- 	}
- 	else if(min >15 && min <= 30){
- 		console.log('Second quarter');
- 	}
- 	else if(min >30 && min <= 45){
- 		console.log('Third quarter');
- 	}
- 	else if(min >45 && min <= 60){
-		console.log('Fourth quarter');
- 	}
- 	else{
- 		console.log('🥚');
- 	}
-
-
-
-</script>
-
-
+    </script>
 </body>
 </html>
